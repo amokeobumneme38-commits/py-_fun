@@ -7,9 +7,9 @@
 # -Data Engineering
 # -AI""")
 
-
-x = 1
-print(x)
+#
+# x = 1
+# print(x)
 
 # email = "Johnpaul"
 # print("info@datawith", email, ".com")
@@ -23,3 +23,14 @@ print(x)
 print(1*2*3)
 a = 10
 print(type(a))
+b = "true"
+print(type(b))
+
+c = 20.6
+print(type(c))
+
+d = 2j
+print(type(d))
+
+e = True
+print(type(e))

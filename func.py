@@ -28,7 +28,7 @@ my_function("20M", " 200M", " 2M")
 
 
 def my_function(car3, car1, car2):
-    print("the fastes car is the " + car2)
+    print("the fastest car is the " + car2)
 
 
 my_function(car1="Toyota", car2="Porche", car3="Nissan")
