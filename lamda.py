@@ -1,15 +1,26 @@
-import lamda
+# import lamda
 
 
-def x(a): return a + 10
+# def x(a): return a + 10
 
 
-print(x(5))
+# print(x(5))
 
 
-def myfunc(n):
-    return lambda a:  a * n
+# def myfunc(n):
+#     return lambda a:  a * n
 
 
-mydoubler = myfunc(2)
-print(mydoubler(11))
+# # mydoubler = myfunc(2)
+# # print(mydoubler(11))
+
+
+# def z(x, y): return x * y
+
+
+# print(z(10, 6))
+
+def z(x, y): return x + y
+
+
+print(z(4, 6))

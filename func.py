@@ -128,51 +128,35 @@
 
 # # def sub():
 # #     result = 6 - 3
+# def start_day():
+#     print("Wake up")
+#     print("Pray")
+#     print("Brush teeth")
+#     print("work out")
+#     print("take a shower")
 
 
-def print_name(*args, **kwargs):
-    print(args)
+# start_day()
 
-    for name in args:
-        greeting = f"Hello {name}, how are you doing today?"
-        print(greeting)
+# def clean_name():
 
-    print(kwargs)
-
-    for name, age in kwargs.items():
-        print(f"Hello {name}, you are {age} years old")
+#   name = "Johnpaul"
+# print(name.strip().upper())
+x = 50
 
 
-def register():
-    full_name = input("Enter your full name: ")
+def add():
 
-    if not full_name:
-        print("Full name is required")
-        return
-
-    email = input("Enter email: ")
-
-    if "@" not in email:
-        print("Enter a valid email")
-        return
-
-    phone_no = input("Enter your phone number: ")
-
-    if not phone_no.isdigit():
-        print("Enter a valid phone number")
-        return
-
-    password = input("Enter password: ")
-    confirm_password = input("Confirm password: ")
-
-    if not password or len(password) < 6:
-        print("Password is too short")
-
-    elif password != confirm_password:
-        print("Passwords must match")
-
-    else:
-        print("Registration Successful")
+    if not x:
+        return "X has no value"
+    return x
 
 
-register()
+def sub():
+    result = x-3
+    return result
+
+
+print(add())
+
+print(sub())
