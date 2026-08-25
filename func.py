@@ -1,59 +1,57 @@
-# # def my_function():
-# #     print("Hello from a function")
 
 
-# # my_function()
+# def my_function():
+#     print("Hello from a function")
 
 
-# # def my_function(fname):
-# #     print(fname + " Refsnes")
+# my_function()
 
 
-# # my_function("Emil")
-# # my_function("Tobias")
-# # my_function("Linus")
-
-# # # args
+# def my_function(fname):
+#     print(fname + " Refsnes")
 
 
-# # def my_function(*cars):
-# #     print("The Toyata is" + cars[2])
-# #     print("the Buggati is" + cars[1])
-# #     print("The Mustang is " + cars[0])
+# my_function("Emil")
+# my_function("Tobias")
+# my_function("Linus")
+
+# # args
 
 
-# # my_function("20M", " 200M", " 2M")
-
-# # # keyword argument & Kwargs
-
-
-# # def my_function(car3, car1, car2):
-# #     print("the fastest car is the " + car2)
+# def my_function(*cars):
+#     print("The Toyata is" + cars[2])
+#     print("the Buggati is" + cars[1])
+#     print("The Mustang is " + cars[0])
 
 
-# # my_function(car1="Toyota", car2="Porche", car3="Nissan")
+# my_function("20M", " 200M", " 2M")
+
+# # keyword argument & Kwargs
 
 
-# # def my_function(**babe):
-# #     print("Her last name is " + babe["lname"])
-# #     print("Her first name is " + babe["fname"])
+# def my_function(car3, car1, car2):
+#     print("the fastest car is the " + car2)
 
 
-# # my_function(fname="Nmesoma", lname="JEJE")
+# my_function(car1="Toyota", car2="Porche", car3="Nissan")
 
 
-# # def my_function(country="Nigeria"):
-# #     print("i am from " + country)
+# def my_function(**babe):
+#     print("Her last name is " + babe["lname"])
+#     print("Her first name is " + babe["fname"])
 
 
-# # my_function("Belgum")
-# # my_function("Sweden")
-# # my_function()
-# # my_function("Denmark")
+# my_function(fname="Nmesoma", lname="JEJE")
 
 
-# from bool import email
-# from bool import password
+# def my_function(country="Nigeria"):
+#     print("i am from " + country)
+
+
+# my_function("Belgum")
+# my_function("Sweden")
+# my_function()
+# my_function("Denmark")
 
 
 # def my_function(food):
@@ -89,45 +87,10 @@
 # tri_recursion(6)
 
 
-# def print_name(*args, **kwargs):
-#     print(args)
-#     for name in args:
-#         greeting = f"Hello {name}, how are you doing Today"
-#         print(greeting)
-#     print(kwargs)
-#     for name, age in kwargs.items():
-#         print(f"Hello {name}, you are {age} years old")
+# def sub():
+#     result = 6 - 3
 
 
-# phone_no = int(input("enter phone_no: "))
-
-
-# def register(full_name, phone_no, password, confirmpass, email):
-#     if not full_name:
-#         print("Full name is requires")
-#         Full_name = input("Enter your full name: ")
-#     email = input("Enter email: ")
-#     if "@" not in email:
-#         print("enter a valid email")
-#         email = input("Enter your email")
-
-#     if not phone_no or type(phone_no) != int:
-#         print("Enter a valid phone number: ")
-#         phone_no = input("Enter your phone number: ")
-#     password = input("enter passsword: ")
-#     comfirmed_password = input("confirm password: ")
-#     if not password or len(password) < 6:
-#         print("password is too short")
-#     elif password != comfirmed_password:
-#         print("passwrod must match")
-#     else:
-#         print("Registration Succesful")
-
-
-# register()
-
-# # def sub():
-# #     result = 6 - 3
 # def start_day():
 #     print("Wake up")
 #     print("Pray")
@@ -138,25 +101,53 @@
 
 # start_day()
 
-# def clean_name():
 
-#   name = "Johnpaul"
-# print(name.strip().upper())
-x = 50
+# x = 50
 
 
-def add():
+# def add():
 
-    if not x:
-        return "X has no value"
-    return x
-
-
-def sub():
-    result = x-3
-    return result
+#     if not x:
+#         return "X has no value"
+#     return x
 
 
-print(add())
+# def sub():
+#     result = x-3
+#     return result
 
-print(sub())
+
+# print(add())
+
+# print(sub())
+
+# f = 2
+
+
+# def multiple_factor(x):
+#     y = x * f
+#     print(y)
+
+
+# multiple_factor(3)
+
+
+case_rule = "lower"
+
+
+def clean_name(first_name, last_name, country):
+    first = first_name.strip()
+    last = last_name.strip()
+    full_name = first + "" + last
+    print(full_name, "From", country)
+
+
+clean_name("  Johnpaul  ", "  Amoke  ", " Nsk ")  # positional
+
+clean_name(first_name=" Amoke ", last_name=" Johnpaul ",
+           country=" NSk ")  # key words
+
+
+# calc the tota; of values
+def total(a, b):
+    print(a + b)
