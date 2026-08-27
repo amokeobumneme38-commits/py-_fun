@@ -112,5 +112,17 @@ print(evens)
 
 
 values = [(1, 'b', "hello"), (2, 'a', "world"), (3, 'c',"johnpaul")]
-sorted_values = sorted(values, key = lambda x: x[1])
+sorted_values = sorted(values, key = lambda x: x[1] + x[2])
 print(sorted_values)
+
+
+numbers =[1, 2, 3, 4, 5]
+
+sum_of_numbers = reduce(lambda acc, x: acc + x, numbers)
+print(sum_of_numbers)
+
+
+max_value = reduce(lambda acc, x: acc if acc > x else x, numbers)
+print(max_value)
+
+
