@@ -87,10 +87,10 @@
 # print(car1.describe())
 
 
-# car1.accelerate(50)
-# Python actually interprets this as:
-# Car.accelerate(car1, 50)
-# 'self' inside the method becomes car1
+# # car1.accelerate(50)
+# # Python actually interprets this as:
+# # Car.accelerate(car1, 50)
+# # 'self' inside the method becomes car1
 
 
 # class John:
@@ -179,63 +179,141 @@
 
 
 
-#method overriding
+# #method overriding
 
-class Vehicle:
-    def honk(self):  
-        print("Generic beep")
+# class Vehicle:
+#     def honk(self):  
+#         print("Generic beep")
 
-class Car(Vehicle):
-    def honk(self):  #overrides vehicle.honk
-        print("car horn: HOONK!" )
-class Bicycle(Vehicle):
-    def honk(self):    #Overrides Vehocles.honk differently
-        print("bicycle bell : Ring ring")
+# class Car(Vehicle):
+#     def honk(self):  #overrides vehicle.honk
+#         print("car horn: HOONK!" )
+# class Bicycle(Vehicle):
+#     def honk(self):    #Overrides Vehocles.honk differently
+#         print("bicycle bell : Ring ring")
 
-Car().honk()
-Bicycle().honk()
-
-
-#multiple inheritance and MRO
-
-class Flyable:
-    def move(self):
-        print("Flying")
-class Swimmable :
-    def move(self):
-        print("swimming")
-
-class Duck(Flyable, Swimmable):
-    pass
-Duck().move()
-print(Duck.__mro__)
+# Car().honk()
+# Bicycle().honk()
 
 
-class Dog:
-    def speak (self):
-        return "woof"
-class Cat:
-    def speak(self):
-        return "Meow"
-class Cow:
-    def speak(self):
-        return "Mooo"
+# #multiple inheritance and MRO
 
-animals = [Dog(), Cat(), Cow()]
+# # class Flyable:
+# #     def move(self):
+# #         print("Flying")
+# # class Swimmable :
+# #     def move(self):
+# #         print("swimming")
 
-for animal in animals:
-    print(animal.speak())
-
+# # class Duck(Flyable, Swimmable):
+# #     pass
+# # Duck().move()
+# # print(Duck.__mro__)
 
 
-class Point:
-    def __init__(self,x,y):
-        self.x, self.y = x , y
-    def __add__(self, other):
-        return Point(self.x + other.x, self.y + other.y)
-    def __repr__(self):
-        return f"Point ({self.x}, {self.y})"
-p1 = Point(1,2)
-p2 = Point(3,4)
-print(p1 + p2)
+# # class Dog:
+# #     def speak (self):
+# #         return "woof"
+# # class Cat:
+# #     def speak(self):
+# #         return "Meow"
+# # class Cow:
+# #     def speak(self):
+# #         return "Mooo"
 
+# # animals = [Dog(), Cat(), Cow()]
+
+# # for animal in animals:
+# #     print(animal.speak())
+
+
+
+# # class Point:
+# #     def __init__(self,x,y):
+# #         self.x, self.y = x , y
+# #     def __add__(self, other):
+# #         return Point(self.x + other.x, self.y + other.y)
+# #     def __repr__(self):
+# #         return f"Point ({self.x}, {self.y})"
+# # p1 = Point(1,2)
+# # p2 = Point(3,4)
+# # print(p1 + p2)
+
+
+
+# class cat:
+#     def __init__(self, name ,hair):
+#         self.__name= name
+#         self.__hair = hair
+
+#     @property
+#     def name(self,):
+#         newname = self.__name + "Nano"
+#         return newname
+
+#     @property
+#     def hair(self):
+#         return self.__hair
+        
+
+   
+#     @name.setter
+#     def name(self,value):
+#         newname = self.__full_name(value)
+#         self.__name = newname
+
+#     @hair.setter
+#     def hair(self, value):
+#         self.__hair = value
+
+#     def __full_name(self,value):
+#         self.__name = value + "Main"
+#         return self.__name
+
+# cat = cat("whiskers", "short", 1234 ) 
+# if "i" in cat.name:
+#     print("your name is correct")
+
+# print(cat.name)
+
+# cat.name = "john"
+# print(cat.name)
+
+
+
+
+
+class People:
+    def __init__(self, name , hair , age):
+        self._name = name
+        self.hair = hair
+        self.__age = age
+
+
+    @property
+    def age(self):
+        return self.__age
+
+    @age.setter
+    def age(self,value):
+        self.__age = value
+
+    def __name(self):
+       self._name = self._name +" Johnpaul"
+       return self._name
+        
+    @property
+    def name(self):
+        return self.__name()
+        
+ 
+    
+p1 = People("Amoke", "black", "20")
+print(p1.age)
+print(p1.name)
+
+print(p1.hair)
+
+   
+
+    
