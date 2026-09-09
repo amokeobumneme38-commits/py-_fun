@@ -1,3 +1,5 @@
+from abc import ABC , abstractmethod
+
 # class Student:
 #     def __init__(self, name, age):
 #         self.name = name 
@@ -39,8 +41,6 @@
 
     
     
-
-
 # class Myclass:
 #     x = 5
 # print(Myclass)
@@ -177,67 +177,78 @@
 # print(my_car.describe())
 
 
-
-
-# #method overriding
-
-# class Vehicle:
-#     def honk(self):  
-#         print("Generic beep")
-
-# class Car(Vehicle):
-#     def honk(self):  #overrides vehicle.honk
-#         print("car horn: HOONK!" )
-# class Bicycle(Vehicle):
-#     def honk(self):    #Overrides Vehocles.honk differently
-#         print("bicycle bell : Ring ring")
-
-# Car().honk()
-# Bicycle().honk()
-
-
-# #multiple inheritance and MRO
-
-# # class Flyable:
-# #     def move(self):
-# #         print("Flying")
-# # class Swimmable :
-# #     def move(self):
-# #         print("swimming")
-
-# # class Duck(Flyable, Swimmable):
-# #     pass
-# # Duck().move()
-# # print(Duck.__mro__)
-
-
-# # class Dog:
-# #     def speak (self):
-# #         return "woof"
-# # class Cat:
-# #     def speak(self):
-# #         return "Meow"
-# # class Cow:
-# #     def speak(self):
-# #         return "Mooo"
-
-# # animals = [Dog(), Cat(), Cow()]
-
-# # for animal in animals:
-# #     print(animal.speak())
+class Animal:
+    def eat(self):
+        print("the animal is eating")
+class Dog(Animal):
+    def bark (self):
+        print("the dog is barking")
+dog = Dog()
+dog.eat()
+dog.bark
 
 
 
-# # class Point:
-# #     def __init__(self,x,y):
-# #         self.x, self.y = x , y
-# #     def __add__(self, other):
-# #         return Point(self.x + other.x, self.y + other.y)
-# #     def __repr__(self):
-# #         return f"Point ({self.x}, {self.y})"
-# # p1 = Point(1,2)
-# # p2 = Point(3,4)
-# # print(p1 + p2)
+
+#method overriding
+
+class Vehicle:
+    def honk(self):  
+        print("Generic beep")
+
+class Car(Vehicle):
+    def honk(self):  #overrides vehicle.honk
+        print("car horn: HOONK!" )
+class Bicycle(Vehicle):
+    def honk(self):    #Overrides Vehocles.honk differently
+        print("bicycle bell : Ring ring")
+
+Car().honk()
+Bicycle().honk()
+
+
+# multiple inheritance and MRO
+
+class Flyable:
+    def move(self):
+        print("Flying")
+class Swimmable :
+    def move(self):
+        print("swimming")
+
+class Duck(Flyable, Swimmable):
+    pass
+Duck().move()
+print(Duck.__mro__)
+
+
+class Dog:
+    def speak (self):
+        return "woof"
+class Cat:
+    def speak(self):
+        return "Meow"
+class Cow:
+    def speak(self):
+        return "Mooo"
+
+animals = [Dog(), Cat(), Cow()]
+
+for animal in animals:
+    print(animal.speak())
+
+
+
+class Point:
+    def __init__(self,x,y):
+        self.x, self.y = x , y
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+    def __repr__(self):
+        return f"Point ({self.x}, {self.y})"
+p1 = Point(1,2)
+p2 = Point(3,4)
+print(p1 + p2)
 
 
 
@@ -284,9 +295,9 @@
 
 
 class People:
-    def __init__(self, name , hair , age):
+    def __init__(self, name , height , age):
         self._name = name
-        self.hair = hair
+        self.height = height
         self.__age = age
 
 
@@ -308,12 +319,33 @@ class People:
         
  
     
-p1 = People("Amoke", "black", "20")
+p1 = People("Amoke", "5'11", "20")
 print(p1.age)
 print(p1.name)
 
-print(p1.hair)
+print(p1.height)
 
    
 
-    
+    #  duck typing
+class Duck:
+     def quack(self):
+        print("Quack")
+
+class Robot:
+    def quack(self):
+        print("beep-Quack")
+
+def make_it_quack(thing):
+    thing.quack()
+
+ducky = Duck()
+robby = Robot()
+
+make_it_quack(ducky)
+make_it_quack(robby)
+
+
+#polymorphism
+# class vendor()
+
